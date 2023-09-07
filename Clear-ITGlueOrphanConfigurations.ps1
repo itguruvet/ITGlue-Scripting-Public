@@ -22,6 +22,8 @@ Function Clear-ITGlueOrphanConfigurations {
     example: 
     1111111
         (Your ORgID should be a 7 digit number)
+          NOTE: This is not actually in use - when I was originally planning the script structurally I was planning to use it, but ultimately I went a different direction and just wound up processing every organization in the tenant so while it is there as a mandatory parameter and used in the examples,
+          the API Key is all that is really needed for funtionality -- I need to clean this up, but wanted to share the script quickly with those who asked for it
 
 .PARAMETER ITG_APIEndpoint
     This should contain the IT Glue API Endpoint. 
