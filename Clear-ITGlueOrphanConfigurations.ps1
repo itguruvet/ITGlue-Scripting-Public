@@ -37,15 +37,15 @@ Function Clear-ITGlueOrphanConfigurations {
 .PARAMETER exportCsvPath
     This is an optional parameter that can be used to export the list of orphaned device to a CSV file prior to any action being taken -- all orphans will be exported to the CSV, whether or not you choose to remove them.
     Example:
-    C:\ITG\Reports
+    C:\Temp
 
 .EXAMPLE
 
     The SUGGESTED use case if you want to monitor the removals as they are used, and ensure that you capture a CSV report of the orphan list while explicitly stating your options without relying on default behavior
-    Clear-ITGlueOrphanConfigurations -ITG_APIKey APIKEYHERE -ITG_OrgID ITLUEORGIDHERE -AutoRemoveOrphans $false -exportCsvPath C:\ITG\Reports
+    Clear-ITGlueOrphanConfigurations -ITG_APIKey APIKEYHERE -ITG_OrgID ITLUEORGIDHERE -AutoRemoveOrphans $false -exportCsvPath C:\Temp
 
     The SUGGESTED use case if you feel comfortable with the results and automatically remove all orphans, and ensure that you capture a CSV report of the orphan list while explicitly stating your options without relying on default behavior
-    Clear-ITGlueOrphanConfigurations -ITG_APIKey APIKEYHERE -ITG_OrgID ITLUEORGIDHERE -AutoRemoveOrphans $true -exportCsvPath C:\ITG\Reports
+    Clear-ITGlueOrphanConfigurations -ITG_APIKey APIKEYHERE -ITG_OrgID ITLUEORGIDHERE -AutoRemoveOrphans $true -exportCsvPath C:\Temp
     
 
 
@@ -53,12 +53,12 @@ Function Clear-ITGlueOrphanConfigurations {
     Clear-ITGlueOrphanConfigurations -ITG_APIKey APIKEYHERE -ITG_OrgID ITLUEORGIDHERE
 
     The second most basic use case, with the least required input -- this will default to prompting for orphan deletion, but will store the orphan list in CSV format
-    Clear-ITGlueOrphanConfigurations -ITG_APIKey APIKEYHERE -ITG_OrgID ITLUEORGIDHERE -exportCsvPath C:\ITG\Reports
+    Clear-ITGlueOrphanConfigurations -ITG_APIKey APIKEYHERE -ITG_OrgID ITLUEORGIDHERE -exportCsvPath C:\Temp
 
   
 
     Prompt the user to confirm each removal individually and export the orphan list to a CSV, while explicitly stating the ITG_APIEndpoint to use (which will default to the US endpoint if not set) - see https://api.itglue.com/developer/ for a list of endpoint alternatives
-    Clear-ITGlueOrphanConfigurations -ITG_APIKey APIKEYHERE -ITG_OrgID ITLUEORGIDHERE -ITG_APIEndpoint https://api.itglue.com -AutoRemoveOrphans $false -exportCsvPath C:\ITG\Reports
+    Clear-ITGlueOrphanConfigurations -ITG_APIKey APIKEYHERE -ITG_OrgID ITLUEORGIDHERE -ITG_APIEndpoint https://api.itglue.com -AutoRemoveOrphans $false -exportCsvPath C:\Temp
 
      
 .LINK
@@ -104,7 +104,7 @@ Function Clear-ITGlueOrphanConfigurations {
                 ValueFromPipeline = $false,
                 ValueFromPipelineByPropertyName = $false,
                 Position = 3,
-                HelpMessage = "This is an optional parameter that will allow you to export the orphan list to a CSV prior to any removals being done - it will export the complete list, regardless of whether you removed them or not. Example: C:\ITG\Reports"
+                HelpMessage = "This is an optional parameter that will allow you to export the orphan list to a CSV prior to any removals being done - it will export the complete list, regardless of whether you removed them or not. Example: C:\Temp"
                 )]
             [string[]]  $exportCsvPath = $null
         )#End Parameter Declarations
