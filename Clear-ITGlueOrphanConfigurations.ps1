@@ -3,9 +3,10 @@
 Function Clear-ITGlueOrphanConfigurations {
 <#
 .SYNOPSIS
-    This is a template meant as a quick start for creating an IT Glue capable script
+    This script is meant to help cleanup orphan devices in your IT Glue tenant, and can be ran with the parameters described below to customize it to your needs/environment.  It is meant to be ran from the ISE, so you may run into errors running it from the command line of VS Code
 
- 
+     Thus script is provided with no warranty, and you should be sure to read it and understand the process before running it in a production environment.
+     
 .NOTES
     Name: Clear-ITGlueOrphanConfigurations
     Author: Adam Ellch (adam@itguru.vet / adam@sysadmin-solutions.net)
@@ -43,7 +44,7 @@ Function Clear-ITGlueOrphanConfigurations {
     The SUGGESTED use case if you want to monitor the removals as they are used, and ensure that you capture a CSV report of the orphan list while explicitly stating your options without relying on default behavior
     Clear-ITGlueOrphanConfigurations -ITG_APIKey APIKEYHERE -ITG_OrgID ITLUEORGIDHERE -AutoRemoveOrphans $false -exportCsvPath C:\ITG\Reports
 
-    The SUGGESTED use case if you want to monitor the removals as they are used, and ensure that you capture a CSV report of the orphan list while explicitly stating your options without relying on default behavior
+    The SUGGESTED use case if you feel comfortable with the results and automatically remove all orphans, and ensure that you capture a CSV report of the orphan list while explicitly stating your options without relying on default behavior
     Clear-ITGlueOrphanConfigurations -ITG_APIKey APIKEYHERE -ITG_OrgID ITLUEORGIDHERE -AutoRemoveOrphans $true -exportCsvPath C:\ITG\Reports
     
 
