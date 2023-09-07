@@ -9,7 +9,7 @@ Function Clear-ITGlueOrphanConfigurations {
      
 .NOTES
     Name: Clear-ITGlueOrphanConfigurations
-    Author: Adam Ellch (adam@itguru.vet / adam@sysadmin-solutions.net)
+    Author: Adam Ellch (adam@itguru.vet / adam@sysadmin-solutions.net https://www.linkedin.com/in/adam-ellch/)
     Version: 1.0
     DateCreated: 6/22/23
 
